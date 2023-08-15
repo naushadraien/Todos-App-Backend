@@ -33,6 +33,9 @@ app.use(cookieParser());
 //using router as a middleware as
 app.use('/api/v1/user',userRouter); //we can add prefix api/v1/user to the routes of in user.js of routes folder
 app.use('/api/v1/task',taskRouter); //we can add prefix api/v1/task to the routes of in task.js of routes folder
+app.use('/',(req,res)=>{
+    res.send('Working')
+});
 
 
 
